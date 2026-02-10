@@ -1,0 +1,145 @@
+.about {
+}
+.about .aboutContent {
+	font-size: 24px;
+	color: white;
+	font-weight: 200;
+	padding-top: 50px;
+	padding-bottom: 80px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.about h2 {
+	margin: 0;
+}
+.about.active .aboutContent > h2,
+.about.active .aboutContent > p,
+.about.active .aboutContent > .links,
+.about.active .aboutContent > .button {
+	position: relative;
+	z-index: 1;
+	animation: fadeIn 1.5s cubic-bezier(0.19, 1, 0.22, 1) .2s, slideUp 1.8s cubic-bezier(0.19, 1, 0.22, 1) .2s;
+	animation-fill-mode: both;
+}
+.about.active .aboutContent > p {
+	animation-delay: .3s;
+}
+.about.active .aboutContent > .links {
+	animation-delay: .4s;
+}
+.about.active .aboutContent > .button {
+	display: block;
+	text-decoration: none;
+	animation-delay: .5s;
+}
+
+.about.active .aboutContent:before {
+	animation: fadeIn 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+	animation-fill-mode: both;
+}
+.about .aboutContent:before,
+.about .aboutContent:after {
+	content: "";
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #1D2024cc;
+	z-index: 0;
+}
+.about .aboutContent:after {
+	background-color: transparent;
+	background-image: radial-gradient(circle closest-side, rgba(0, 111, 255, 0.13), transparent 200px);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: -18vw -105px;
+}
+.about .logo {
+	color: white;
+	font-size: 40px;
+}
+.about .logo span {
+	font-size: 40px;
+}
+.about .logo img {
+	filter: brightness(2);
+	height: 80px;
+}
+.about .logo em {
+	color: #f0db4f;
+}
+.about .logo em::first-letter {
+	color: inherit;
+}
+.about p,
+.about ul.links {
+	max-width: 700px;
+}
+.about ul.links {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 20px;
+}
+.about ul.links li {
+	flex: 1;
+	flex-basis: calc(50%-20px);
+	display: flex;
+	white-space: nowrap;
+}
+.about ul.links li a {
+	flex:1;
+	color: white;
+	font-weight: 300;
+	position: relative;
+	display: block;
+	padding: 18px 0;
+	text-decoration: none;
+	transition: all .4s cubic-bezier(0.19, 1, 0.22, 1);
+	text-decoration: underline wavy;
+	text-decoration-color: transparent;
+}
+.about ul.links li a:hover {
+	color: #67c1f5;
+	text-decoration-color: currentColor;
+}
+.about ul.links li a:before{
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: #2EBFFF;
+}
+.about ul.links li a:after {
+	content: "REPOSITORY";
+	position: absolute;
+	top: 0;
+	left: 15px;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color: #AEAEAE;
+}
+.about ul.links li:last-child a:before {
+	background-color: #BAFF2E;
+}
+.about ul.links li:last-child a:after {
+	content: "FORMATION";
+}
+
+.about .button {
+	justify-content: flex-start;
+	padding: 15px 25px;
+	text-align: left;
+	width: 300px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 1;
+	letter-spacing: 0.03em;
+}
